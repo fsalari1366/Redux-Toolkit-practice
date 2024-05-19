@@ -5,11 +5,8 @@ import { buyCake } from "../features/cake/cakeSlice";
 function CakeContainer() {
   const [value, setValue] = useState(0);
 
-  // 1. accepts a fucntion as its parameter : selector function
-  // 2. useSelector hooks return whatever returns by selector function
   const state = useSelector((state) => state.cake);
 
-  // returns a reference to the dispatch fucntion in redux store
   const dispatch = useDispatch();
 
   return (
@@ -26,7 +23,4 @@ function CakeContainer() {
 }
 export default CakeContainer;
 
-// 1. how to dispatch actions
-// 2. how to access to redux store
 
-// without hooks (CC) => mapStateToProps, mapDispatchToProps => BAD PRACTISE
